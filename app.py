@@ -70,7 +70,9 @@ elif st.session_state.current_index >= len(st.session_state.image_pairs):
     st.info("아래 버튼을 눌러 결과 파일을 다운로드하세요.")
     
     final_df = pd.DataFrame(st.session_state.results)
-    st.dataframe(final_df)
+    
+    # ❗️❗️❗️ 이 부분을 삭제하거나 주석 처리했습니다.
+    # st.dataframe(final_df) 
     
     csv = final_df.to_csv(index=False).encode('utf-8')
     st.download_button(
